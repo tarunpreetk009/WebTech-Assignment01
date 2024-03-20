@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Prime</title>
+  <link rel="icon" href="https://shorturl.at/mnRT3" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #232f3e;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .hero {
+      background-image: url(''); 
+      background-size: cover;
+      color:#577899;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e68a00;
+    }
+    footer {
+      background-color: #232f3e;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .login-container {
+      display: none;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .login-container input {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Amazon Prime</h1>
+    <nav>
+      <ul>
+        <li id="homeLink"><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Watchlist</a></li>
+        <li id="loginBtn"><a href="#">Login</a></li>
+        <li id="signupBtn"><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>Stream thousands of movies & TV shows</h2>
+    <p>Watch anywhere. Cancel anytime.</p>
+    <img src="https://shorturl.at/cnxW6" alt="Amazon Prime Image" height="200cm" width="400cm" alignment="center">
+    <button id="startTrialBtn">Start Your Free Trial</button>
+  </section>
+  <section class="login-container" id="loginContainer">
+    <h2>Login to Amazon Prime</h2>
+    <form>
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2024 Amazon Prime. All rights reserved.</p>
+  </footer>
+  <script>
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
+    const loginContainer = document.getElementById('loginContainer');
+
+    loginBtn.addEventListener('click', function() {
+      loginContainer.style.display = 'block';
+    });
+    signupBtn.addEventListener('click', function() {
+      window.location.href = 'signup.html'; 
+    });
+    const homeLink = document.getElementById('homeLink');
+    homeLink.addEventListener('mouseenter', function() {
+      homeLink.querySelector('a').href = 'default.html';
+    });
+  </script>
+</body>
+</html>
